@@ -1,2 +1,5 @@
 #!/bin/bash
-python3 -c "import py_compile; py_compile.compile('$PYFILE', '`echo $PYFILE`c')"
+echo "Compiling main.py ..."
+python3 -m py_compile $PYFILE
+mv ./__pycache__/*.pyc $PYFILEc
+rm -rf __pycache__
