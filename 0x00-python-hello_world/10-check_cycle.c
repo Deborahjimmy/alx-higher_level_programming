@@ -1,22 +1,24 @@
 #include "lists.h"
 
 /**
- * check_cycle - Checks if a list is circular.
- * @list: Pointer to the first element of the list.
- * Return: 0 if there is no cycle, 1 if there is.
- */
+* check_cycle - checks for loops in a singly listed link
+* @list: pointer to singly linked list
+*
+* Return: 0 cycle does not exists, 1 cycle exists
+*/
+
 int check_cycle(listint_t *list)
 {
-        size_t bufsize = 2, i, elem = 0;
-        listint_t **buffer = malloc(bufsize * sizeof(listint_t*));
-        listint_t *current = list;
+	listint_t *fast = list;
+	listint_t *slow = list;
 
-        if (buffer == NULL)
-                return (-1);
-
-        while (current)
-        {
-                for (i = 0; i < elem; i++)
-                {
-                        if (current == buffer[i])
+	while (fast && slow && fast->next)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+		if(fast == slow)
+			return 1;
+	}
+return 0;
+}
 
