@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Locked class
+Defines a Locked class
 
 """
 
