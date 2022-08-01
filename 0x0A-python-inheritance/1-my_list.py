@@ -1,16 +1,14 @@
 #!/usr/bin/python3
 """
-This is the "1-my_list" module.
-The 1-my_list module supplies one function, my_list(). For example,
-my_list(MyList).
+Module for My list task
 """
 
 
 class MyList(list):
-    """a class tha inherits from list"""
-    def __init__(self):
-        super().__init__()
+    """
+    A class MyList that inherits from list
+    """
 
     def print_sorted(self):
-        """prints the list, but sorted (ascending sort)"""
+        """Print the list sorted."""
         print(sorted(self))
