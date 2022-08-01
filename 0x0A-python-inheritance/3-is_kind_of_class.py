@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+
 """
-Module Containing the function is_kind_of_class.
+module for same class or inherit from task
 """
 
 
 def is_kind_of_class(obj, a_class):
-    """returns True if object is an instance or inherited from a_class, else False"""
-    return (isinstance(obj, a_class))
+    """Return if the object is an instance of a class"""
+    return isinstance(obj, a_class)
