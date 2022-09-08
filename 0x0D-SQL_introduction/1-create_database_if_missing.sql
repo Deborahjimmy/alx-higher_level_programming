@@ -1,2 +1,2 @@
--- Drop database if exist
-DROP DATABASE IF EXISTS  hbtn_0c_0;
+-- Create A DATABASE
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
