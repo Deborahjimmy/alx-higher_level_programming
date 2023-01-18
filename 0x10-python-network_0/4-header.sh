@@ -1,3 +1,3 @@
 #!/bin/bash
-# send a get request with custome data and display body
-curl -s "$1" -X GET -H 'X-HolbertonSchool-User-Id: 98' 
+# curl sends GET req to URL, displays response body
+curl -sH "X-School-User-Id: 98" "$1" 
